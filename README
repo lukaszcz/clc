@@ -1,0 +1,27 @@
+
+This is a formalisation of the confluence result from the paper:
+L. Czajka "Confluence of an extension of Combinatory Logic by Boolean
+constants", FSCD 2017.
+
+The basic definitions of terms, the rewrite relations of CL-pc,
+CL-pc^1, etc., are contained in the file basic_defs.v. The main
+theorem is in the file clc.v. The statement of the main theorem uses
+only the definitions from basic_defs.v. Everything else is needed just
+to carry out the proof. In the formalisation the system CL-pc from the
+paper is referred to as CLC0, the system CL-pc^1 as CLC, and CL-pc^L
+as CLC+.
+
+To compile the project type:
+
+   make -j n
+
+where n is the number of jobs to execute in parallel.
+
+You need Coq version *exactly* 8.6. The proof scripts may not work
+with other versions.
+
+Note that because the proof scripts make heavy use of automated
+reasoning tactics, compilation may take some time. On a machine with
+eight 3.4GHz cores and 32GB of RAM, parallel compilation takes about
+10 minutes. On the same machine sequential compilation takes about 25
+minutes.
